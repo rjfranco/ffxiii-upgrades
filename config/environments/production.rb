@@ -57,4 +57,10 @@ FfxiiiWeaponUpgradeCalculator::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Configure the url to link back to the actual host
+  config.action_mailer.default_url_options = { :host => 'ffxiii-upgrades.com:3000' }
+  
+  # Prevents assets from touching the DB before compiling (fixes issues in heroku)
+  config.assets.initialize_on_precompile = false
 end

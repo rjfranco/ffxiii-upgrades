@@ -15,9 +15,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: ffxiii-weapon-upgrade-calculator_development
+  database: ffxiii-upgrades_development
   pool: 5
-  username: ffxiii-weapon-upgrade-calculator
+  username: ffxiii-upgrades
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -41,17 +41,17 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: ffxiii-weapon-upgrade-calculator_test
+  database: ffxiii-upgrades_test
   pool: 5
-  username: ffxiii-weapon-upgrade-calculator
+  username: ffxiii-upgrades
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: ffxiii-weapon-upgrade-calculator_production
+  database: ffxiii-upgrades_production
   pool: 5
-  username: ffxiii-weapon-upgrade-calculator
+  username: ffxiii-upgrades
   password:
 
 cucumber:
