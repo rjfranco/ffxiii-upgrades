@@ -8,7 +8,7 @@ class CreateWeapons < ActiveRecord::Migration
       t.integer :max_magic
       t.string :bonus
       t.integer :base_exp
-      t.integer :increment
+      t.integer :increment_exp
       t.integer :buy
       t.integer :sell
 

@@ -9,7 +9,7 @@ FactoryGirl.define do
     max_magic 1
     bonus "MyString"
     base_exp 1
-    increment 1
+    increment_exp 1
     buy 1
     sell 1
   end

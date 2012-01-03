@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120103011551) do
+ActiveRecord::Schema.define(:version => 20120103021202) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20120103011551) do
     t.integer  "max_magic"
     t.string   "bonus"
     t.integer  "base_exp"
-    t.integer  "increment"
+    t.integer  "increment_exp"
     t.integer  "buy"
     t.integer  "sell"
     t.datetime "created_at"

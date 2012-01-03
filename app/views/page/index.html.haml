@@ -3,5 +3,5 @@
 %p Lets pick a Character to Start
 
 %nav.characters
-  - @characters.each do character
-    link_to character.name, character
+  - @characters.each do |character|
+    = link_to character.name, character

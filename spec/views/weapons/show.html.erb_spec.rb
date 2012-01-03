@@ -10,7 +10,7 @@ describe "weapons/show.html.erb" do
       :max_magic => 1,
       :bonus => "Bonus",
       :base_exp => 1,
-      :increment => 1,
+      :increment_exp => 1,
       :buy => 1,
       :sell => 1
     ))

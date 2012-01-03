@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   
   def admin_only
     unless user_is_admin?
-      redirect_to root, flash[:error] => 'This Area is Accessible only to Admins.'
+      redirect_to root_path, flash[:error] => 'This Area is Accessible only to Admins.'
     end
   end
 end

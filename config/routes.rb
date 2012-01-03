@@ -1,6 +1,6 @@
 FfxiiiWeaponUpgradeCalculator::Application.routes.draw do
-  resources :materials
   resources :weapons
+  resources :materials
   resources :characters
 
   devise_for :users

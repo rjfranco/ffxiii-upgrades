@@ -1,15 +1,19 @@
-- form_for(@weapon) do |f|
+= form_for(@weapon) do |f|
+
   - if @weapon.errors.any?
     #error_explanation
       %h2= pluralize(@weapon.errors.count, "error") + " prohibited this weapon from being saved:"
       %ul
         - @weapon.errors.full_messages.each do |msg|
           %li= msg
-          
+
   %ul.fields
     %li
       = f.label :name
       = f.text_field :name
+    %li
+      = f.label :character
+      = select :weapon, :character, Character.all.collect {|c| [c.name, c.id]}, {:prompt => 'Please Select a Character.'}
     %li
       = f.label :min_level
       = f.number_field :min_level
@@ -29,12 +33,13 @@
       = f.label :base_exp
       = f.number_field :base_exp
     %li
-      = f.label :increment
-      = f.number_field :increment
+      = f.label :increment_exp
+      = f.number_field :increment_exp
     %li
       = f.label :buy
       = f.number_field :buy
     %li
       = f.label :sell
       = f.number_field :sell
+
   = f.submit

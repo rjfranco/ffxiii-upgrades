@@ -10,7 +10,7 @@ describe "weapons/edit.html.erb" do
       :max_magic => 1,
       :bonus => "MyString",
       :base_exp => 1,
-      :increment => 1,
+      :increment_exp => 1,
       :buy => 1,
       :sell => 1
     ))
@@ -28,7 +28,7 @@ describe "weapons/edit.html.erb" do
       assert_select "input#weapon_max_magic", :name => "weapon[max_magic]"
       assert_select "input#weapon_bonus", :name => "weapon[bonus]"
       assert_select "input#weapon_base_exp", :name => "weapon[base_exp]"
-      assert_select "input#weapon_increment", :name => "weapon[increment]"
+      assert_select "input#weapon_increment_exp", :name => "weapon[increment_exp]"
       assert_select "input#weapon_buy", :name => "weapon[buy]"
       assert_select "input#weapon_sell", :name => "weapon[sell]"
     end
