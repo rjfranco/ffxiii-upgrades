@@ -8,6 +8,7 @@ gem 'rails', '3.1.3'
 gem 'pg'
 gem 'devise'
 gem 'haml'
+gem 'formtastic'
 
 group :test, :development do
   gem 'cucumber-rails'

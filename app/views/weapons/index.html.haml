@@ -1,0 +1,24 @@
+%h2 Listing Weapons
+
+- @weapons.each do |weapon|
+  %ul
+    %li= weapon.name
+    - unless weapon.character.blank?
+      %li= weapon.character.name
+    %li= weapon.min_level
+    %li= weapon.max_level
+    %li= weapon.max_strength
+    %li= weapon.max_magic
+    %li= weapon.bonus
+    %li= weapon.base_exp
+    %li= weapon.increment_exp
+    %li= weapon.buy
+    %li= weapon.sell
+    - if user_is_admin?
+      %li.admin
+        %ul
+          %li= link_to 'Show', weapon
+          %li= link_to 'Edit', edit_weapon_path(weapon)
+          %li= link_to 'Destroy', weapon, confirm: 'Are you sure?', method: :delete
+
+= link_to 'New Weapon', new_weapon_path

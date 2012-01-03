@@ -1,4 +1,4 @@
-= form_for(@weapon) do |f|
+= semantic_form_for @weapon do |f|
 
   - if @weapon.errors.any?
     #error_explanation
@@ -8,38 +8,16 @@
           %li= msg
 
   %ul.fields
-    %li
-      = f.label :name
-      = f.text_field :name
-    %li
-      = f.label :character
-      = select :weapon, :character, Character.all.collect {|c| [c.name, c.id]}, {:prompt => 'Please Select a Character.'}
-    %li
-      = f.label :min_level
-      = f.number_field :min_level
-    %li
-      = f.label :max_level
-      = f.number_field :max_level
-    %li
-      = f.label :max_strength
-      = f.number_field :max_strength
-    %li
-      = f.label :max_magic
-      = f.number_field :max_magic
-    %li
-      = f.label :bonus
-      = f.text_field :bonus
-    %li
-      = f.label :base_exp
-      = f.number_field :base_exp
-    %li
-      = f.label :increment_exp
-      = f.number_field :increment_exp
-    %li
-      = f.label :buy
-      = f.number_field :buy
-    %li
-      = f.label :sell
-      = f.number_field :sell
+    %li= f.input :name
+    %li= f.input :character, :as => :select
+    %li= f.input :min_level
+    %li= f.input :maxlevel
+    %li= f.input :max_strength
+    %li= f.input :max_magic
+    %li= f.input :bonus
+    %li= f.input :base_exp
+    %li= f.input :increment_exp
+    %li= f.input :buy
+    %li= f.input :sell
 
   = f.submit
