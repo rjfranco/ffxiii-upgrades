@@ -3,8 +3,8 @@
 - @weapons.each do |weapon|
   %ul
     %li= weapon.name
-    - unless weapon.character.blank?
-      %li= weapon.character.name
+    - if weapon.character
+      %li=raw "Weapon for #{link_to weapon.character.name, weapon.character}"
     %li= weapon.min_level
     %li= weapon.max_level
     %li= weapon.max_strength

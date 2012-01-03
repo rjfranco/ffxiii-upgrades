@@ -1,0 +1,44 @@
+- if notice
+  %p#notice= notice
+  
+%section#weapon
+  %h2= @weapon.name
+  - if @weapon.character
+    %p=raw "Weapon for #{link_to @weapon.character.name, @weapon.character}"
+  - if @weapon.min_level
+    %p= "Minimum level is #{@weapon.min_level}"
+  - if @weapon.max_level
+    %p= "Maximum level is #{@weapon.max_level}"
+  - if @weapon.max_magic
+    %p= "Maximum Magic is #{@weapon.max_magic}"
+  - if @weapon.max_strength
+    %p= "Maximum Strength is #{@weapon.max_strength}"
+
+/ <p>
+/   <b>Bonus:</b>
+/   <%= @weapon.bonus %>
+/ </p>
+/ 
+/ <p>
+/   <b>Base exp:</b>
+/   <%= @weapon.base_exp %>
+/ </p>
+/ 
+/ <p>
+/   <b>Increment exp:</b>
+/   <%= @weapon.increment_exp %>
+/ </p>
+/ 
+/ <p>
+/   <b>Buy:</b>
+/   <%= @weapon.buy %>
+/ </p>
+/ 
+/ <p>
+/   <b>Sell:</b>
+/   <%= @weapon.sell %>
+/ </p>
+
+
+= link_to 'Edit', edit_weapon_path(@weapon)
+= link_to 'Back', weapons_path
