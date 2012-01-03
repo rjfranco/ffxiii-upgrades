@@ -1,0 +1,57 @@
+<%= form_for(@weapon) do |f| %>
+  <% if @weapon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weapon.errors.count, "error") %> prohibited this weapon from being saved:</h2>
+
+      <ul>
+      <% @weapon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :min_level %><br />
+    <%= f.number_field :min_level %>
+  </div>
+  <div class="field">
+    <%= f.label :max_level %><br />
+    <%= f.number_field :max_level %>
+  </div>
+  <div class="field">
+    <%= f.label :max_strength %><br />
+    <%= f.number_field :max_strength %>
+  </div>
+  <div class="field">
+    <%= f.label :max_magic %><br />
+    <%= f.number_field :max_magic %>
+  </div>
+  <div class="field">
+    <%= f.label :bonus %><br />
+    <%= f.text_field :bonus %>
+  </div>
+  <div class="field">
+    <%= f.label :base_exp %><br />
+    <%= f.number_field :base_exp %>
+  </div>
+  <div class="field">
+    <%= f.label :increment %><br />
+    <%= f.number_field :increment %>
+  </div>
+  <div class="field">
+    <%= f.label :buy %><br />
+    <%= f.number_field :buy %>
+  </div>
+  <div class="field">
+    <%= f.label :sell %><br />
+    <%= f.number_field :sell %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

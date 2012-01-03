@@ -1,4 +1,10 @@
 FfxiiiWeaponUpgradeCalculator::Application.routes.draw do
+  resources :materials
+
+  resources :weapons
+
+  resources :characters
+
   devise_for :users
 
   root :to => 'page#index'

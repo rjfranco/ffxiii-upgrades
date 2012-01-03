@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @material.name %>
+</p>
+
+<p>
+  <b>Buy:</b>
+  <%= @material.buy %>
+</p>
+
+<p>
+  <b>Sell:</b>
+  <%= @material.sell %>
+</p>
+
+<p>
+  <b>Store:</b>
+  <%= @material.store %>
+</p>
+
+<p>
+  <b>Exp:</b>
+  <%= @material.exp %>
+</p>
+
+<p>
+  <b>Multiplier:</b>
+  <%= @material.multiplier %>
+</p>
+
+
+<%= link_to 'Edit', edit_material_path(@material) %> |
+<%= link_to 'Back', materials_path %>

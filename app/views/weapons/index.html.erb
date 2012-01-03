@@ -1,0 +1,41 @@
+<h1>Listing weapons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Min level</th>
+    <th>Max level</th>
+    <th>Max strength</th>
+    <th>Max magic</th>
+    <th>Bonus</th>
+    <th>Base exp</th>
+    <th>Increment</th>
+    <th>Buy</th>
+    <th>Sell</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weapons.each do |weapon| %>
+  <tr>
+    <td><%= weapon.name %></td>
+    <td><%= weapon.min_level %></td>
+    <td><%= weapon.max_level %></td>
+    <td><%= weapon.max_strength %></td>
+    <td><%= weapon.max_magic %></td>
+    <td><%= weapon.bonus %></td>
+    <td><%= weapon.base_exp %></td>
+    <td><%= weapon.increment %></td>
+    <td><%= weapon.buy %></td>
+    <td><%= weapon.sell %></td>
+    <td><%= link_to 'Show', weapon %></td>
+    <td><%= link_to 'Edit', edit_weapon_path(weapon) %></td>
+    <td><%= link_to 'Destroy', weapon, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weapon', new_weapon_path %>
