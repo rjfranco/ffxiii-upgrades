@@ -1,13 +1,12 @@
 FfxiiiWeaponUpgradeCalculator::Application.routes.draw do
   resources :materials
-
   resources :weapons
-
   resources :characters
 
   devise_for :users
 
   root :to => 'page#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

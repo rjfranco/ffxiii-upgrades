@@ -1,2 +1,7 @@
 %h2 A Final Fantasy XIII Upgrade Tool
 %p This tool is meant to help determine what resources you need to upgrade weapons in a cost effective way. At the moment all calculations are estimates. That will steadily change as I find more data.
+%p Lets pick a Character to Start
+
+%nav.characters
+  - @characters.each do character
+    link_to character.name, character

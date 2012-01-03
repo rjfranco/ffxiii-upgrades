@@ -1,4 +1,5 @@
 class CharactersController < ApplicationController
+  before_filter :admin_only, :except => [:index, :show]
   # GET /characters
   # GET /characters.json
   def index

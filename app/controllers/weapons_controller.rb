@@ -1,4 +1,5 @@
 class WeaponsController < ApplicationController
+  before_filter :admin_only, :except => [:index, :show]
   # GET /weapons
   # GET /weapons.json
   def index

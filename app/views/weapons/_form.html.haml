@@ -1,0 +1,40 @@
+- form_for(@weapon) do |f|
+  - if @weapon.errors.any?
+    #error_explanation
+      %h2= pluralize(@weapon.errors.count, "error") + " prohibited this weapon from being saved:"
+      %ul
+        - @weapon.errors.full_messages.each do |msg|
+          %li= msg
+          
+  %ul.fields
+    %li
+      = f.label :name
+      = f.text_field :name
+    %li
+      = f.label :min_level
+      = f.number_field :min_level
+    %li
+      = f.label :max_level
+      = f.number_field :max_level
+    %li
+      = f.label :max_strength
+      = f.number_field :max_strength
+    %li
+      = f.label :max_magic
+      = f.number_field :max_magic
+    %li
+      = f.label :bonus
+      = f.text_field :bonus
+    %li
+      = f.label :base_exp
+      = f.number_field :base_exp
+    %li
+      = f.label :increment
+      = f.number_field :increment
+    %li
+      = f.label :buy
+      = f.number_field :buy
+    %li
+      = f.label :sell
+      = f.number_field :sell
+  = f.submit

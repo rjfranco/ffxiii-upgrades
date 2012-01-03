@@ -1,4 +1,5 @@
 class MaterialsController < ApplicationController
+  before_filter :admin_only, :except => [:index, :show]
   # GET /materials
   # GET /materials.json
   def index
